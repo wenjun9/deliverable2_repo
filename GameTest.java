@@ -14,16 +14,10 @@ public class GameTest {
 		Player p = mock(Player.class);
 		House h = mock(House.class);
 		Game g = new Game(p,h);
-		//don't need a when
 		
 		//Execution 
 		int result = g.doSomething("N");
-		
-		//Assertions
-		//verify(h).moveNorth();
 		verify(h,times(1)).moveNorth();
-		//verify(h,never()).moveSouth();
-		//verify(h,times(2)).moveNorth();
 		assertEquals(result,0);
 			
 		
@@ -65,7 +59,9 @@ public class GameTest {
 		
 	}
 	
-		
+//		stub the 'drink', giving a new return.
+//		get the only one result.		
+	
 	@Test
     public void testPlayerDrink(){
 		Player p = mock(Player.class);
@@ -79,7 +75,9 @@ public class GameTest {
 		assertEquals(result,1);
 	    
 	  }
-	    
+	
+	    //enter any other letter.
+	    // the return value always be 0.
 		@Test
 		public void testwhat() {
 			Player p = mock(Player.class);

@@ -5,6 +5,9 @@ import org.junit.Test;
 //import static org.mockito.Mockito.*;
 
 public class RoomTest {
+
+//	create a new room and settled the attributes of new room 
+//	then verify the result if or not equal with the settled 
 	
 	@Test
 	public void testhasItem(){
@@ -61,6 +64,8 @@ public class RoomTest {
 	}
 	
 	
+//	create a new room and settled the attributes of new room 
+//	prove the result if not has the some words in the strings
 	@Test
 	public void testgetDescription(){
 		

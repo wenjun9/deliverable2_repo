@@ -6,9 +6,10 @@ import static org.mockito.Mockito.*;
 
 public class HouseTest {
 
+	//mock the room. and settle the function of the room
+	//stub "getDescription",return a new result
 	
 	@Test
-	
 	public void testGetDescription() {
 		Room r = mock(Room.class);
 		when(r.getDescription()).thenReturn("Test");
@@ -21,8 +22,10 @@ public class HouseTest {
 		
 	}
 	
+	//if the house only have one room
+	//when you movenorth ,there is not more room
+	//so the result must be the output string
 	@Test
-	
 	public void testgetCurrentRoomInfo(){
 		Room r = mock(Room.class);
 		House nh  = new House (1);
@@ -34,8 +37,11 @@ public class HouseTest {
 		
 	}
 	
-	@Test
+//	create a new house, and settle the number of the rooms
+//	give the specific room number
+//	then the get the different result of the items
 	
+	@Test
 	public void testGenerateRooms0(){
 		House nh  = new House (6);
 		Room[] r = nh.generateRooms(6);
@@ -46,7 +52,6 @@ public class HouseTest {
 	}
 	
     @Test
-	
 	public void testGenerateRooms1(){
 		House nh  = new House (6);
 		Room[] r = nh.generateRooms(6);
@@ -57,7 +62,6 @@ public class HouseTest {
 	}
 	
     @Test
-
     public void testGenerateRooms2(){
 	     House nh  = new House (6);
 	     Room[] r = nh.generateRooms(6);
@@ -68,7 +72,6 @@ public class HouseTest {
      }
     
     @Test
-
     public void testGenerateRooms3(){
 	     House nh  = new House (6);
 	     Room[] r = nh.generateRooms(6);
@@ -79,7 +82,6 @@ public class HouseTest {
      }
 	
     @Test
-
     public void testGenerateRooms4(){
 	     House nh  = new House (6);
 	     Room[] r = nh.generateRooms(6);
