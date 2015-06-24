@@ -78,14 +78,17 @@ public class GameTest {
 	    verify(p,times(1)).drink();
 		assertEquals(result,1);
 	    
+	  }
 	    
-	    
-//	    boolean finalStatus = p.drink();
-//		   if (finalStatus){
-			    assertEquals(result,1);
-//		}
-//		   else {
-//			    assertEquals(result,-1);
+		@Test
+		public void testwhat() {
+			Player p = mock(Player.class);
+			House h = mock(House.class);
+			Game g = new Game(p,h);
+			
+			int result = g.doSomething("f");
+			assertEquals(result,0);
+			
 		}
 		
 		
@@ -93,12 +96,7 @@ public class GameTest {
 	
 	
 	
-	//@Test
-	//public void testHasItem(){
-		//Room r = new Room(true, true,true,true,true);
-		//boolean returnval=r.hasItem();
-		//assertEquals(returnval,true);
-	//}
+	
 
 			
 		

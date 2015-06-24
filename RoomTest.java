@@ -62,14 +62,23 @@ public class RoomTest {
 	
 	
 	@Test
-	public void testgetDescription(){	
+	public void testgetDescription(){
+		
 	   Room r = new Room(false,true,false,true,false);
        String result  = r.getDescription();
        boolean containsRoom = result.contains("room");
        assertTrue(containsRoom);
 	}
 	
-				
+	@Test
+	public void testgetDescription1(){	
+		
+	   Room r = new Room(false,true,false,true,false);
+       String result  = r.getDescription();
+       boolean containsRoom = result.contains("door leads North");
+       assertTrue(containsRoom);
+	}
+			
 
 		
 }

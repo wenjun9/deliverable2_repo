@@ -19,8 +19,6 @@ public class PlayerTest {
 	
 	public void testshowInventory1(){
 		Player p = new Player(true,true,true);
-		verify(p,times(1)).showInventory();
-		
 		boolean result = p.drink();
 		assertEquals(result,true);
 		
@@ -35,5 +33,23 @@ public class PlayerTest {
 		
 	}
 	
+   @Test
+	
+	public void testdrink(){
+		Player p = new Player(true,false,false);
+		boolean result = p.drink();
+		assertEquals(result,false);
+		
+	}
 
+   @Test
+	
+  	public void testdrink1(){
+  		Player p = new Player(false,true,false);
+  		boolean result = p.drink();
+  		assertEquals(result,false);
+  		
+  	}
+   
+   
 }
